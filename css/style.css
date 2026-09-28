@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #111614;
+    color: #E8EEE9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    padding: 30px;
+
+    background: #1A211D;
+
+    border: 1px solid #266210;
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+    margin-bottom: 24px;
+
+    text-align: center;
+
+    color: #E1E100;
+    font-size: 32px;
+}
+
+.container > div:first-of-type {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.new-task {
+    flex: 1;
+
+    padding: 12px 14px;
+
+    background: #111614;
+    color: #E8EEE9;
+
+    border: 1px solid #3A463D;
+    border-radius: 9px;
+
+    outline: none;
+}
+
+.new-task::placeholder {
+    color: #7D897F;
+}
+
+.new-task:focus {
+    border-color: #90B800;
+}
+
+#add-btn {
+    padding: 12px 20px;
+
+    background: #90B800;
+    color: #111614;
+
+    border: none;
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#add-btn:hover {
+    background: #E1E100;
+}
+
+.task-box {
+    padding: 12px;
+
+    background: #111614;
+
+    border-radius: 12px;
+}
+
+.task-list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    background: #202720;
+
+    border: 1px solid #266210;
+    border-radius: 9px;
+}
+
+.task-list li span {
+    flex: 1;
+
+    overflow-wrap: anywhere;
+}
+
+.task-list button {
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+/* Complete */
+.task-list button:first-of-type {
+    background: #E1E100;
+    color: #111614;
+}
+
+.task-list button:first-of-type:hover {
+    background: #90B800;
+}
+
+/* Delete */
+.task-list button:last-of-type {
+    background: #266210;
+    color: #E8EEE9;
+}
+
+.task-list button:last-of-type:hover {
+    background: #90B800;
+    color: #111614;
+}
+
+/* Completed task */
+.task-list li.completed {
+    opacity: 0.55;
+}
+
+.task-list li.completed span {
+    text-decoration: line-through;
+}
